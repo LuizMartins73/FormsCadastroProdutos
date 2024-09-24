@@ -54,6 +54,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.TextVlAlterar = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
+            this.Valor_Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dvg)).BeginInit();
             this.SuspendLayout();
             // 
@@ -119,11 +120,12 @@
             this.dvg.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Produto,
             this.Qtde,
-            this.Valor_unit});
+            this.Valor_unit,
+            this.Valor_Total});
             this.dvg.Location = new System.Drawing.Point(30, 148);
             this.dvg.Name = "dvg";
             this.dvg.ReadOnly = true;
-            this.dvg.Size = new System.Drawing.Size(316, 161);
+            this.dvg.Size = new System.Drawing.Size(444, 161);
             this.dvg.TabIndex = 10;
             this.dvg.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -193,11 +195,12 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 23.25F);
             this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Location = new System.Drawing.Point(707, 23);
+            this.label6.Location = new System.Drawing.Point(669, 25);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(32, 35);
             this.label6.TabIndex = 15;
             this.label6.Text = "0";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // Finalizar
             // 
@@ -207,6 +210,7 @@
             this.Finalizar.TabIndex = 17;
             this.Finalizar.Text = "Finalizar";
             this.Finalizar.UseVisualStyleBackColor = true;
+            this.Finalizar.Click += new System.EventHandler(this.Finalizar_Click);
             // 
             // button2
             // 
@@ -216,6 +220,7 @@
             this.button2.TabIndex = 18;
             this.button2.Text = "Sair";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // textBox2
             // 
@@ -313,6 +318,12 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // Valor_Total
+            // 
+            this.Valor_Total.HeaderText = "Valor_Total";
+            this.Valor_Total.Name = "Valor_Total";
+            this.Valor_Total.ReadOnly = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -379,6 +390,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox TextVlAlterar;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Valor_Total;
     }
 }
 
